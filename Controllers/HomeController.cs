@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 using WellmanFinal1.Models;
 
 namespace WellmanFinal1.Controllers
@@ -14,6 +15,11 @@ namespace WellmanFinal1.Controllers
         }
 
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult HobbyInfo()
         {
             return View();
         }
