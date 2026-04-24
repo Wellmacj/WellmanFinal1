@@ -28,5 +28,15 @@ namespace WellmanFinal1.Controllers
             var games = _context.Games.ToList();
             return View(games);
         }
+        public IActionResult Details(int id)
+        {
+            var game = _context.Games.FirstOrDefault(g => g.Id == id);
+
+            if (game == null)
+            {
+                return NotFound();
+            }
+            return View(game);
+        }
     }
 }
