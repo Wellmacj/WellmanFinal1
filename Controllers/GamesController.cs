@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WellmanFinal1.Data;
+using WellmanFinal1.Models;
 
 namespace WellmanFinal1.Controllers
 {
@@ -14,6 +15,16 @@ namespace WellmanFinal1.Controllers
 
         public IActionResult Index()
         {
+            if (!_context.Games.Any())
+            {
+                _context.Games.Add(new Game { Name = "Minecraft", Genre = "Sandbox", Rating = 10, HoursPlayed = 500 });
+                _context.Games.Add(new Game { Name = "League of Legends", Genre = "MOBA", Rating = 8, HoursPlayed = 300 });
+                _context.Games.Add(new Game { Name = "Deadlock", Genre = "MOBA", Rating = 9, HoursPlayed = 100 });
+                _context.Games.Add(new Game { Name = "Terraria", Genre = "Adventure", Rating = 9, HoursPlayed = 200 });
+
+                _context.SaveChanges();
+            }
+
             var games = _context.Games.ToList();
             return View(games);
         }
