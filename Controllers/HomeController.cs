@@ -18,11 +18,6 @@ namespace WellmanFinal1.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         public IActionResult AboutMe()
         {
             return View();
