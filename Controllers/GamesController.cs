@@ -17,10 +17,10 @@ namespace WellmanFinal1.Controllers
         {
             if (!_context.Games.Any())
             {
-                _context.Games.Add(new Game { Name = "Minecraft", Genre = "Sandbox", Rating = 10, HoursPlayed = 500, ImagePath = "/images/minecraft.jpg" });
-                _context.Games.Add(new Game { Name = "League of Legends", Genre = "MOBA", Rating = 8, HoursPlayed = 300, ImagePath = "/images/league of legends.png" });
-                _context.Games.Add(new Game { Name = "Deadlock", Genre = "MOBA", Rating = 9, HoursPlayed = 100, ImagePath = "/images/deadlock.png" });
-                _context.Games.Add(new Game { Name = "Terraria", Genre = "Adventure", Rating = 9, HoursPlayed = 200, ImagePath = "/images/terraria.png" });
+                _context.Games.Add(new Game { Name = "Minecraft", Genre = "Sandbox", Rating = 10, HoursPlayed = 500, ImagePath = "/img/minecraft.jpg" });
+                _context.Games.Add(new Game { Name = "League of Legends", Genre = "MOBA", Rating = 8, HoursPlayed = 300, ImagePath = "/img/league of legends.png" });
+                _context.Games.Add(new Game { Name = "Deadlock", Genre = "MOBA", Rating = 9, HoursPlayed = 100, ImagePath = "/img/deadlock.png" });
+                _context.Games.Add(new Game { Name = "Terraria", Genre = "Adventure", Rating = 9, HoursPlayed = 200, ImagePath = "/img/terraria.png" });
 
                 _context.SaveChanges();
             }
