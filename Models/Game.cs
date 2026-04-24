@@ -16,5 +16,7 @@ namespace WellmanFinal1.Models
         public int HoursPlayed { get; set; }
 
         public string ImagePath { get; set; }
+
+        public string Description { get; set; }
     }
 }

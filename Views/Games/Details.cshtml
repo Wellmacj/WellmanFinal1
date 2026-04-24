@@ -4,15 +4,21 @@
     ViewData["Title"] = "Game Details";
 }
 
-<h1>@Model.Name</h1>
+<div style="display:flex; gap:20px; align-items:flex-start;">
 
-<hr />
+    <img src="@Model.ImagePath"
+         style="width:250px; border-radius:10px;" />
 
-<p><strong>Genre:</strong> @Model.Genre</p>
-<p><strong>Rating:</strong> @Model.Rating / 10</p>
-<p><strong>Hours Played:</strong> @Model.HoursPlayed</p>
+    <div>
+        <h1>@Model.Name</h1>
 
-<hr />
+        <p><strong>Genre:</strong> @Model.Genre</p>
+        <p><strong>Rating:</strong> @Model.Rating / 10</p>
+        <p><strong>Hours Played:</strong> @Model.HoursPlayed</p>
 
-<img src="@Model.ImagePath"
-     style="width:300px;" />
+        <hr />
+
+        <p>@Model.Description</p>
+    </div>
+
+</div>
